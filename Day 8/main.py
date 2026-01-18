@@ -30,7 +30,7 @@ def input_into_box_tuples(input: str) -> list[tuple[int, int, int]]:
 def distance_between(box1: tuple[int, int, int], box2: tuple[int, int, int]) -> float:
     return math.dist(box1, box2)
 
-def calc_results(list_of_circuits: list[set[int]]) -> int:
+def calc_results(list_of_circuits) -> int:
     return len(list_of_circuits[0]) * len(list_of_circuits[1]) * len(list_of_circuits[2])
 
 
@@ -51,7 +51,7 @@ def create_list_of_merges(list_of_boxes):
     return sorted_list
 
 
-def find_index_in_circuits(box1: tuple[int,int,int], list_of_circuits: list[set[tuple[int,int,int]]]) -> int:
+def find_index_in_circuits(box1, list_of_circuits: list[set[tuple[int,int,int]]]) -> int:
     for circuit in list_of_circuits:
         if box1 in circuit:
             return list_of_circuits.index(circuit)
@@ -75,7 +75,7 @@ def process_closest_list(closest_list: list[tuple[tuple[int, int, float], tuple[
             merged_circuits = make_connection(box1_index, box2_index, merged_circuits)
     return sorted(merged_circuits, key=len, reverse=True)
 
-def process_closest_list_part_2(closest_list: list[tuple[tuple[int, int, float], tuple[int, int, int], float]], list_of_circuits: list[set[tuple[int, int, int]]]) ->  tuple[tuple[int, int, float]]:
+def process_closest_list_part_2(closest_list: list[tuple[tuple[int, int, float], tuple[int, int, int], float]], list_of_circuits: list[set[tuple[int, int, int]]]):
     merged_circuits = list_of_circuits[:]
     box1 = tuple()
     box2 = tuple()
@@ -101,6 +101,7 @@ def calculate_part_2_result(box1, box2):
 def main():
     box_list = input_into_box_tuples(puzzleinput)
     closest_list = create_list_of_merges(box_list)
+    result=0
     if question_part == 1:
         if len(sys.argv) > 1:
             connections = int(sys.argv[1])
