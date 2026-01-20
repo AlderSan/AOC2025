@@ -574,3 +574,5 @@ fmf: wqz dfp
 rdt: gwk
 pxu: nkl
 tbx: ati ehx biw rdf gtk"""
+
+puzzleinput2=puzzleinput

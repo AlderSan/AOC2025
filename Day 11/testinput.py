@@ -1,10 +1,24 @@
-puzzleinput="""aaa: you hhh
-you: bbb ccc
-bbb: ddd eee
-ccc: ddd eee fff
-ddd: ggg
-eee: out
-fff: out
+# puzzleinput = """aaa: you hhh
+# you: bbb ccc
+# bbb: ddd eee
+# ccc: ddd eee fff
+# ddd: ggg
+# eee: out
+# fff: out
+# ggg: out
+# hhh: ccc fff iii
+# iii: out"""
+
+puzzleinput="""svr: aaa bbb
+aaa: fft
+fft: ccc
+bbb: tty
+tty: ccc
+ccc: ddd eee
+ddd: hub
+hub: fff
+eee: dac
+dac: fff
+fff: ggg hhh
 ggg: out
-hhh: ccc fff iii
-iii: out"""
+hhh: out"""
